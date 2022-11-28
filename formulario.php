@@ -17,13 +17,13 @@
         require_once 'funciones.php';
 
         if (isset($_POST["size"])) {
-            $entrada = $_POST["size"];
+            $entrada_size = $_POST["size"];
+            $entrada = str_replace(" ", "", $entrada_size);
             if ($entrada === '') {
                 printArrayBi(crearArrayRandomDNI());
             } else {
-                $sizeArray = explode(',', str_replace(" ", "", $entrada));
+                $sizeArray = explode(',', $entrada);
                 $size = count($sizeArray);
-
                 if ($size == 1 && isValidNumber($sizeArray[0])) {
                     printArrayBi(crearArrayRandomDNI($sizeArray[0], $sizeArray[0]));
                 } else if ($size == 2 && isValidNumber($sizeArray[0]) && isValidNumber($sizeArray[1])) {

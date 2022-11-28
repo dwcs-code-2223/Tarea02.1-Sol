@@ -50,7 +50,8 @@ function isInRange(string $dni, int $min, int $max) {
  * Función que crea un array de $num_rows filas x $num_colums columnas
  * con enteros aleatorios entre $min y $max como valores
  */
-function crearArrayRandomDNI($num_rows = FILAS_POR_DEFECTO, $num_colums = COLUMNAS_POR_DEFECTO) {
+function crearArrayRandomDNI($num_rows = FILAS_POR_DEFECTO,
+        $num_colums = COLUMNAS_POR_DEFECTO) {
     $array = [];
     for ($i = 0; $i < $num_rows; $i++) {
         for ($j = 0; $j < $num_colums; $j++) {
